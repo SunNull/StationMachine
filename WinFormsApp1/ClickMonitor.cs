@@ -155,7 +155,7 @@ namespace StationMachine
             }
             ~KeyboardHook()
             {
-                Stop();
+                Stop();  
             }
         }
     }
