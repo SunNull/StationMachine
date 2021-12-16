@@ -49,36 +49,39 @@ namespace StationMachine
 
         private void BtnSure_Click(object sender, EventArgs e)
         {
-            UpdatePassWord();
+            if (!UpdatePassWord())
+                return;
             if (tbxHttpAdress.Text != HttpAddress)
             {
                 Application.ExitThread();
                 Thread RestartThread = new Thread(new ParameterizedThreadStart(run));
-                object appName = Application.ExecutablePath;//获取应用程序路径和名称
+                //object appName = Application.StartupPath;//获取应用程序路径和名称
+                string apppathName = Application.ExecutablePath;//获取应用程序路径和名称
+                apppathName = apppathName.Replace(".dll", ".exe");
                 Thread.Sleep(100);
-                RestartThread.Start(appName);
+                RestartThread.Start(apppathName);
             }
             else
                 this.Close();
         }
 
-        private void UpdatePassWord()
+        private bool UpdatePassWord()
         {
             if (string.IsNullOrWhiteSpace(tbxHttpAdress.Text.Trim()))
             {
                 MessageBox.Show("请配置网址！");
-                return;
+                return false;
             }
             else if (string.IsNullOrWhiteSpace(tbxOldPassWord.Text.Trim()) || string.IsNullOrWhiteSpace(tbxNewPassWord.Text))
             {
                 MessageBox.Show("密码不可为空！");
-                return;
+                return false;
             }
             else if (tbxOldPassWord.Text.Trim() != ConfigurationManager.AppSettings["ExitPassWord"].ToString())
             {
                 MessageBox.Show("旧密码不正确！");
                 this.tbxOldPassWord.Text = string.Empty;
-                return;
+                return false;
             }
 
             Configuration configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
@@ -91,6 +94,7 @@ namespace StationMachine
                 configuration.AppSettings.Settings["IsFirst"].Value = "false";
             configuration.Save(ConfigurationSaveMode.Modified);
             ConfigurationManager.RefreshSection("appSettings");
+            return true;
         }
     }
 }

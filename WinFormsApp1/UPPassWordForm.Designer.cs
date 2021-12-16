@@ -44,7 +44,8 @@ namespace StationMachine
             this.btnSure.Location = new System.Drawing.Point(86, 140);
             this.btnSure.Name = "btnSure";
             this.btnSure.Size = new System.Drawing.Size(75, 23);
-            this.btnSure.TabIndex = 0;
+            this.btnSure.TabIndex = 2;
+            this.btnSure.Tag = "2";
             this.btnSure.Text = "确认";
             this.btnSure.UseVisualStyleBackColor = true;
             // 
@@ -52,22 +53,27 @@ namespace StationMachine
             // 
             this.tbxOldPassWord.Location = new System.Drawing.Point(86, 75);
             this.tbxOldPassWord.Name = "tbxOldPassWord";
+            this.tbxOldPassWord.PasswordChar = '*';
             this.tbxOldPassWord.Size = new System.Drawing.Size(137, 23);
-            this.tbxOldPassWord.TabIndex = 1;
+            this.tbxOldPassWord.TabIndex = 0;
+            this.tbxOldPassWord.Tag = "0";
             // 
             // tbxNewPassWord
             // 
             this.tbxNewPassWord.Location = new System.Drawing.Point(285, 75);
             this.tbxNewPassWord.Name = "tbxNewPassWord";
+            this.tbxNewPassWord.PasswordChar = '*';
             this.tbxNewPassWord.Size = new System.Drawing.Size(156, 23);
             this.tbxNewPassWord.TabIndex = 1;
+            this.tbxNewPassWord.Tag = "1";
             // 
             // btnExist
             // 
             this.btnExist.Location = new System.Drawing.Point(366, 140);
             this.btnExist.Name = "btnExist";
             this.btnExist.Size = new System.Drawing.Size(75, 23);
-            this.btnExist.TabIndex = 0;
+            this.btnExist.TabIndex = 3;
+            this.btnExist.Tag = "3";
             this.btnExist.Text = "退出";
             this.btnExist.UseVisualStyleBackColor = true;
             // 
