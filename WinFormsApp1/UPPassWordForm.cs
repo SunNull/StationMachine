@@ -77,7 +77,7 @@ namespace StationMachine
                 MessageBox.Show("密码不可为空！");
                 return false;
             }
-            else if (tbxOldPassWord.Text.Trim() != ConfigurationManager.AppSettings["ExitPassWord"].ToString())
+            else if (tbxOldPassWord.Text.Trim() != ConfigurationManager.AppSettings["MainPassWord"].ToString() && tbxOldPassWord.Text.Trim() != ConfigurationManager.AppSettings["ExitPassWord"].ToString())
             {
                 MessageBox.Show("旧密码不正确！");
                 this.tbxOldPassWord.Text = string.Empty;

@@ -27,6 +27,7 @@ namespace StationMachine
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //HelperLog.CreateShortcut("");
             if (ConfigurationManager.AppSettings["IsFirst"].ToString() == "true")
             {
                 UPPassWordForm upw = new UPPassWordForm();

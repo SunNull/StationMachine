@@ -35,11 +35,12 @@ namespace StationMachine
             this.label1 = new System.Windows.Forms.Label();
             this.lbl2 = new System.Windows.Forms.Label();
             this.btnUppass = new System.Windows.Forms.Button();
+            this.btnupdateurl = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnok
             // 
-            this.btnok.Location = new System.Drawing.Point(34, 101);
+            this.btnok.Location = new System.Drawing.Point(202, 97);
             this.btnok.Name = "btnok";
             this.btnok.Size = new System.Drawing.Size(66, 26);
             this.btnok.TabIndex = 1;
@@ -49,7 +50,7 @@ namespace StationMachine
             // 
             // btncancel
             // 
-            this.btncancel.Location = new System.Drawing.Point(208, 101);
+            this.btncancel.Location = new System.Drawing.Point(274, 97);
             this.btncancel.Name = "btncancel";
             this.btncancel.Size = new System.Drawing.Size(66, 26);
             this.btncancel.TabIndex = 2;
@@ -62,7 +63,7 @@ namespace StationMachine
             this.tbx.Location = new System.Drawing.Point(103, 34);
             this.tbx.Name = "tbx";
             this.tbx.PasswordChar = '*';
-            this.tbx.Size = new System.Drawing.Size(153, 23);
+            this.tbx.Size = new System.Drawing.Size(237, 23);
             this.tbx.TabIndex = 0;
             this.tbx.Tag = "0";
             // 
@@ -78,7 +79,7 @@ namespace StationMachine
             // lbl2
             // 
             this.lbl2.AutoSize = true;
-            this.lbl2.Location = new System.Drawing.Point(89, 66);
+            this.lbl2.Location = new System.Drawing.Point(148, 63);
             this.lbl2.Name = "lbl2";
             this.lbl2.Size = new System.Drawing.Size(120, 17);
             this.lbl2.TabIndex = 2;
@@ -86,22 +87,33 @@ namespace StationMachine
             // 
             // btnUppass
             // 
-            this.btnUppass.Location = new System.Drawing.Point(121, 101);
+            this.btnUppass.Location = new System.Drawing.Point(41, 97);
             this.btnUppass.Name = "btnUppass";
             this.btnUppass.Size = new System.Drawing.Size(66, 26);
             this.btnUppass.TabIndex = 2;
             this.btnUppass.Tag = "2";
-            this.btnUppass.Text = "修改配置";
+            this.btnUppass.Text = "修改密码";
             this.btnUppass.UseVisualStyleBackColor = true;
+            // 
+            // btnupdateurl
+            // 
+            this.btnupdateurl.Location = new System.Drawing.Point(113, 97);
+            this.btnupdateurl.Name = "btnupdateurl";
+            this.btnupdateurl.Size = new System.Drawing.Size(66, 26);
+            this.btnupdateurl.TabIndex = 2;
+            this.btnupdateurl.Tag = "2";
+            this.btnupdateurl.Text = "修改网址";
+            this.btnupdateurl.UseVisualStyleBackColor = true;
             // 
             // MessageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(308, 156);
+            this.ClientSize = new System.Drawing.Size(403, 156);
             this.Controls.Add(this.lbl2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbx);
+            this.Controls.Add(this.btnupdateurl);
             this.Controls.Add(this.btnUppass);
             this.Controls.Add(this.btncancel);
             this.Controls.Add(this.btnok);
@@ -123,5 +135,7 @@ namespace StationMachine
         private System.Windows.Forms.Button btnok;
         private System.Windows.Forms.Label lbl2;
         private System.Windows.Forms.Button btnUppass;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnupdateurl;
     }
 }
