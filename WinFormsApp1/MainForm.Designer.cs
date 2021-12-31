@@ -30,7 +30,7 @@ namespace StationMachine
         private void InitializeComponent()
         {
             this.SuspendLayout();
-            // 
+            //   
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
