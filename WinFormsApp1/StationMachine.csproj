@@ -4,8 +4,27 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
-    <ApplicationIcon>GWJ.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\favicon.ico</ApplicationIcon>
+    <StartupObject></StartupObject>
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="CefUtils.cs" />
+    <Compile Remove="ClickMonitor.cs" />
+    <Compile Remove="HelperLog.cs" />
+  </ItemGroup>
+
+
 
   <ItemGroup>
     <PackageReference Include="CefSharp.WinForms.NETCore" Version="95.7.141" />
@@ -31,15 +50,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Update="chromiumembeddedframework.runtime.win-arm64" Version="96.0.14" />
+    <PackageReference Update="chromiumembeddedframework.runtime.win-arm64" Version="95.7.14" />
+  </ItemGroup>
+
+	<ItemGroup>
+    <PackageReference Update="chromiumembeddedframework.runtime.win-x64" Version="95.7.14" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Update="chromiumembeddedframework.runtime.win-x64" Version="96.0.14" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Update="chromiumembeddedframework.runtime.win-x86" Version="96.0.14" />
+    <PackageReference Update="chromiumembeddedframework.runtime.win-x86" Version="95.7.14" />
   </ItemGroup>
 
 </Project>

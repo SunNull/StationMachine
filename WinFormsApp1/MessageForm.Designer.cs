@@ -135,7 +135,6 @@ namespace StationMachine
         private System.Windows.Forms.Button btnok;
         private System.Windows.Forms.Label lbl2;
         private System.Windows.Forms.Button btnUppass;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnupdateurl;
     }
 }

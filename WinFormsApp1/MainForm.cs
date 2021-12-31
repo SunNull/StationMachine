@@ -27,6 +27,7 @@ namespace StationMachine
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
             //HelperLog.CreateShortcut("");
             if (ConfigurationManager.AppSettings["IsFirst"].ToString() == "true")
             {
@@ -43,7 +44,7 @@ namespace StationMachine
 
         }
 
-        public void KeyPress(KeyboardHookLib.HookStruct hookStruct, out bool handle)
+        public new void KeyPress(KeyboardHookLib.HookStruct hookStruct, out bool handle)
         {
             handle = false; //预设不拦截任何键
 
@@ -100,17 +101,6 @@ namespace StationMachine
             {
                 handle = true;
             }
-            //如果键A~Z
-            //if (hookStruct.vkCode >= (int)Keys.A && hookStruct.vkCode <= (int)Keys.Z)
-            //{
-            //    //挡掉G键，想要挡掉哪些键就把下面的G换成那个要挡掉的键，同理可以挡多个
-            //    if (hookStruct.vkCode == (int)Keys.D)
-            //    {
-            //        hookStruct.vkCode = (int)Keys.None; //设键为0
-            //        handle = true;
-            //    }
-
-            //}
 
         }
     }
